@@ -323,13 +323,17 @@
     window.addEventListener("load", function () {
         const loader = document.getElementById("loader");
 
+        // Show all case study sections
+        document.querySelectorAll(".reveal").forEach(function (section) {
+            section.classList.add("active");
+        });
+
+        // Hide loader
         if (loader) {
-            setTimeout(function () {
-                loader.style.opacity = "0";
-                loader.style.visibility = "hidden";
-            }, 1500);
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
         }
     });
-</script>
+    </script>
 </body>
 </html>
